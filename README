@@ -1,24 +1,8 @@
-from airflow import DAG
-from airflow.operators.empty import EmptyOperator
-from datetime import datetime
+Задание 6.8 data.1t.ru D
+ataOps в Kubernetes с Apache Airflow 
 
-default_args = {
-'owner': 'airflow',
-'depends_on_past': False,
-'start_date': datetime(2023, 7, 19),
-'email_on_failure': False,
-'email_on_retry': False,
-}
+Создание python-скрипта в DAG
 
-dag = DAG(
-'example_dag',
-default_args=default_args,
-description='A simple tutorial DAG',
-schedule=None,
-)
+    1. Реализуйте треугольник Паскаля с 10 уровнями на Python. Вывод должен быть в консоль Python.
 
-t1 = EmptyOperator(
-task_id='dummy_task',
-retries=3,
-dag=dag,
-)
+    2. Оберните скрипт в DAG-обертку. Время запуска — 11:44, даг должен называться pascal. Запуск — ежедневный.
